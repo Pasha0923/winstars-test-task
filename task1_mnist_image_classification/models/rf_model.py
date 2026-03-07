@@ -1,6 +1,7 @@
 import numpy as np
 from .interface import MnistClassifierInterface
 from sklearn.ensemble import RandomForestClassifier
+
 class RandomForestModel(MnistClassifierInterface):
 
     def __init__(self):

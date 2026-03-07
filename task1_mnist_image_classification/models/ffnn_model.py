@@ -40,8 +40,9 @@ class NeuralNetworkModel(MnistClassifierInterface):
             self.optimizer.zero_grad()
             loss.backward()
             self.optimizer.step()
+            
     def predict(self, X):
-        self.model.train()
+        self.model.eval()
         X = torch.tensor(X).float()
 
         with torch.no_grad():
