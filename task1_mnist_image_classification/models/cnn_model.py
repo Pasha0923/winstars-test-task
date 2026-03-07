@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torch.utils.data import TensorDataset, DataLoader
 from .interface import MnistClassifierInterface
 
 class CNN(nn.Module):
@@ -32,10 +33,10 @@ class CNN(nn.Module):
     
 class CNNModel(MnistClassifierInterface):
 
-    def __init__(self, epochs=5):
-
+    def __init__(self, epochs=5, batch_size=64):
         self.model = CNN()
         self.epochs = epochs
+        self.batch_size = batch_size
         self.loss_fn = nn.CrossEntropyLoss()
         self.optimizer = optim.Adam(self.model.parameters())
 
@@ -46,8 +47,8 @@ class CNNModel(MnistClassifierInterface):
         X_train = torch.tensor(X_train).float().unsqueeze(1)
         y_train = torch.tensor(y_train).long()
 
-        dataset = torch.utils.data.TensorDataset(X_train, y_train)
-        loader = torch.utils.data.DataLoader(dataset, batch_size=64, shuffle=True)
+        dataset = TensorDataset(X_train, y_train)
+        loader = DataLoader(dataset, batch_size=self.batch_size, shuffle=True)
 
         for epoch in range(self.epochs):
             for X_batch, y_batch in loader:
