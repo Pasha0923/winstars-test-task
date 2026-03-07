@@ -1,6 +1,7 @@
 from .rf_model import RandomForestModel
 from .ffnn_model import NeuralNetworkModel
 from .cnn_model import CNNModel
+
 class MnistClassifier:
 
     def __init__(self, algorithm="rf"):

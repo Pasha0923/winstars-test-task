@@ -3,7 +3,6 @@ import torch.nn as nn
 import torch.optim as optim
 from .interface import MnistClassifierInterface
 
-
 class CNN(nn.Module):
 
     def __init__(self):
@@ -42,20 +41,26 @@ class CNNModel(MnistClassifierInterface):
 
     def train(self, X_train, y_train):
 
+        self.model.train()
+
         X_train = torch.tensor(X_train).float().unsqueeze(1)
         y_train = torch.tensor(y_train).long()
 
+        dataset = torch.utils.data.TensorDataset(X_train, y_train)
+        loader = torch.utils.data.DataLoader(dataset, batch_size=64, shuffle=True)
+
         for epoch in range(self.epochs):
+            for X_batch, y_batch in loader:
 
-            outputs = self.model(X_train)
-            loss = self.loss_fn(outputs, y_train)
+                outputs = self.model(X_batch)
+                loss = self.loss_fn(outputs, y_batch)
 
-            self.optimizer.zero_grad()
-            loss.backward()
-            self.optimizer.step()
+                self.optimizer.zero_grad()
+                loss.backward()
+                self.optimizer.step()
 
     def predict(self, X):
-
+        self.model.eval()
         X = torch.tensor(X).float().unsqueeze(1)
 
         with torch.no_grad():

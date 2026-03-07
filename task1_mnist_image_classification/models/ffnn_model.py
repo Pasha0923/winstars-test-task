@@ -3,7 +3,6 @@ import torch.nn as nn
 import torch.optim as optim
 from .interface import MnistClassifierInterface
 
-
 class SimpleNN(nn.Module):
 
     def __init__(self):

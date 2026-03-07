@@ -1,4 +1,3 @@
-import numpy as np
 from .interface import MnistClassifierInterface
 from sklearn.ensemble import RandomForestClassifier
 
