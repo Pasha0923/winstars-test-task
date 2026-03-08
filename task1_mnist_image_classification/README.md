@@ -18,6 +18,7 @@ The `MnistClassifier` class acts as a wrapper to select the algorithm (`rf`, `nn
 ---
 
 ## Project Structure
+```bash
 task1_mnist_image_classification/
 ├── models/
 │ ├── interface.py # abstract classifier interface
@@ -33,6 +34,7 @@ task1_mnist_image_classification/
 ├── pyproject.toml # Poetry project file
 |── .gitignore
 |── requirements.txt
+```
 
 ## Installation
 
@@ -42,8 +44,9 @@ task1_mnist_image_classification/
 git clone https://github.com/your_username/winstars-test-task.git
 cd task1_mnist_image_classification
 ```
-2. Install dependencies (poetry or pip)
-using Poetry:
+2. Install dependencies (poetry or pip):
+
+using poetry:
 ```bash
 poetry install
 ```
