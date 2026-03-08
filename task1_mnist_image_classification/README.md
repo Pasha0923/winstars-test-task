@@ -15,8 +15,6 @@ All models implement a unified interface `MnistClassifierInterface` with two met
 
 The `MnistClassifier` class acts as a wrapper to select the algorithm (`rf`, `nn`, `cnn`) while keeping the **same input/output structure**.
 
----
-
 ## Project Structure
 ```bash
 task1_mnist_image_classification/
@@ -26,7 +24,7 @@ task1_mnist_image_classification/
 │ ├── nn_model.py # Feed-Forward NN
 │ ├── rf_model.py # Random Forest
 │ ├── mnist_classifier.py # main classifier wrapper
-| ├── init.py
+| ├── __init__.py
 ├── utils/
 │ └── mnist_loader.py # function to load MNIST dataset
 ├── notebook/ 
@@ -35,6 +33,16 @@ task1_mnist_image_classification/
 |── .gitignore
 |── requirements.txt
 ```
+
+## Requirements 
+ Python 3.13
+
+ Libraries:
+- numpy==2.4.2
+- scipy==1.17.1
+- scikit-learn==1.8.0
+- torch==2.10.0
+- torchvision==0.25.0
 
 ## Installation
 
@@ -56,18 +64,25 @@ pip install -r requirements.txt
 ```
 ## Usage
 
- ### Demo Notebook
+### Demo Notebook
 demo.ipynb demonstrates:
-- Loading MNIST data
--Training all three models
+-Loading MNIST data
+-Train the implemented models (RF, NN, CNN)
 -Evaluating accuracy
--edge case testing
+-Edge case testing
 
 The file `demo.ipynb` demonstrates how the models work.  
-You can open it in Jupyter Notebook/VS Code or Google Colab
+You can open it in Jupyter Notebook/VS Code or Google Colab and run the cells sequentially.
+
+## Edge Cases
+We test how the model handles:
+- Correct single image
+- Missing batch dimension
+- Incorrect input shape
 
 ## Notes
 - The MNIST dataset is automatically downloaded via torchvision.datasets.MNIST.
 - Temporary files (like __pycache__/, .vscode/, and data/) are ignored via .gitignore.
 - demo.ipynb contains examples and edge cases to demonstrate model functionality.
+
 
