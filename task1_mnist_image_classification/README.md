@@ -49,7 +49,7 @@ task1_mnist_image_classification/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/winstars-test-task.git
+git clone https://github.com/Pasha0923/winstars-test-task.git
 cd task1_mnist_image_classification
 ```
 2. Install dependencies (poetry or pip):
@@ -63,18 +63,13 @@ using pip:
 pip install -r requirements.txt
 ```
 ## Usage
+Demo Notebook demonstrates how the models work: 
+- Loading MNIST data
+- Train the implemented models (RF, NN, CNN)
+- Evaluating accuracy
+- Edge case testing
 
-### Demo Notebook
-
-demo.ipynb demonstrates:
-
--Loading MNIST data
--Train the implemented models (RF, NN, CNN)
--Evaluating accuracy
--Edge case testing
-
-The file `demo.ipynb` demonstrates how the models work.  
-You can open it in Jupyter Notebook/VS Code or Google Colab and run the cells sequentially.
+You can open file `demo.ipynb` it in Jupyter Notebook/VS Code or Google Colab and run the cells sequentially.
 
 ## Edge Cases
 We test how the model handles:
