@@ -67,6 +67,7 @@ pip install -r requirements.txt
 ### Demo Notebook
 
 demo.ipynb demonstrates:
+
 -Loading MNIST data
 -Train the implemented models (RF, NN, CNN)
 -Evaluating accuracy
