@@ -8,7 +8,10 @@ This project implements a multimodal animal classifier that combines:
 
 2. **Image classification (CNN) to recognize an animal in an image**
 
-3. **The final pipeline takes text + image as input and returns True / False depending on whether they refer to the same animal**   
+3. **The pipeline:** 
+- Extracts the animal from the text using the NER model
+- Predicts the animal in the image using the CNN classifier
+- Compares both predictions returns True / False depending on whether they refer to the same animal  
 
 ## Project Structure
 ```bash
@@ -95,9 +98,8 @@ https://drive.google.com/drive/folders/1Hbwdq0-5YsCFl0RZlXCx3vqhoB3Z8FcI
 
 After downloading:
 
-1️⃣ Extract the folder
-
-2️⃣ Copy it into: trained_models/
+1. Extract the folder
+2. Copy it into: trained_models/
 
 Final structure should look like:
 ```bash
@@ -110,3 +112,56 @@ trained_models/
     ├── tokenizer_config.json
     └── label2id.json
 ```
+## Requirements 
+
+Python 3.11 – 3.13
+Poetry (for dependency management)
+ Libraries:
+- torch
+- torchvision
+- transformers
+- scikit-learn
+- numpy
+- pandas
+- pillow
+- matplotlib
+- accelerate
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Pasha0923/winstars-test-task.git
+cd task2_animal-multimodal_classifier
+```
+2. Install dependencies using Poetry:
+```bash
+poetry install
+```
+
+## Running 
+1. Image Classification
+
+Test image classification only:
+```bash
+ poetry run python models/image_classification/inference_img.py --image examples/image/1.jpeg
+```
+ 2. NER (Text → Animal)
+ Test text animal extraction:
+```bash
+poetry run python models/ner/inference_ner.py --text "Your text with animals from dataset , example cat"
+```   
+3. Multimodal Pipeline (Text + Image)
+```bash
+poetry run python pipeline.py --text "I have a feeling that the animal shown here might be a butterfly" --image examples/image/1.jpeg
+```       
+
+## Notes
+
+This project demonstrates a multimodal AI pipeline that combines:
+
+- NLP (NER) for extracting entities from text
+- Computer Vision (CNN) for image classification
+- Pipeline logic to compare predictions from both modalities
+- The result is a simple but complete text + image verification system.

@@ -35,7 +35,7 @@ task1_mnist_image_classification/
 ```
 
 ## Requirements 
- Python 3.13
+ Python 3.13 - 3.14
 
  Libraries:
 - numpy==2.4.2
