@@ -24,14 +24,12 @@ task2_animal-multimodal_classifier/
 ├── models/                     # model implementations
 
 │   ├── ner/
-│   │   ├── __init__.py
 │   │   ├── ner_model.py        # NER model architecture (DistilBERT for token classification)
 │   │   ├── train_ner.py        # script for fine-tuning the NER model
 │   │   ├── inference_ner.py    # script for extracting animal names from text
 │   │   └── generate_ner_dataset.py  # script to generate synthetic NER training data
 │
 │   ├── image_classification/
-│   │   ├── __init__.py
 │   │   ├── img_model.py        # CNN image classifier (ResNet18)
 │   │   ├── train_img.py        # script for training the image classifier
 │   │   ├── inference_img.py    # script for predicting the animal from an image
@@ -49,9 +47,6 @@ task2_animal-multimodal_classifier/
 ├── README.md                   # project documentation
 └── .gitignore                  # ignored files
 ```
-## Dataset
-
-
 
 ## Exploratory Data Analysis
 
@@ -96,9 +91,8 @@ Therefore they are provided via Google Drive.
 
 Download link:
 
-```bash
 https://drive.google.com/drive/folders/1Hbwdq0-5YsCFl0RZlXCx3vqhoB3Z8FcI
-```
+
 After downloading:
 
 1️⃣ Extract the folder
@@ -106,9 +100,8 @@ After downloading:
 2️⃣ Copy it into: trained_models/
 
 Final structure should look like:
-
+```bash
 trained_models/
-│
 ├── img_model.pth
 └── ner_model/
     ├── config.json
@@ -116,3 +109,4 @@ trained_models/
     ├── tokenizer.json
     ├── tokenizer_config.json
     └── label2id.json
+```
