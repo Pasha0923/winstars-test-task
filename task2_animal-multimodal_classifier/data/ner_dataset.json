@@ -1,0 +1,202 @@
+[
+    {
+        "text": "There is a butterfly in the picture",
+        "animal": "butterfly"
+    },
+    {
+        "text": "I think the image shows a butterfly",
+        "animal": "butterfly"
+    },
+    {
+        "text": "The animal in this photo is a butterfly",
+        "animal": "butterfly"
+    },
+    {
+        "text": "Looks like a butterfly in the image",
+        "animal": "butterfly"
+    },
+    {
+        "text": "Can you see the butterfly here?",
+        "animal": "butterfly"
+    },
+    {
+        "text": "There is a cat in the picture",
+        "animal": "cat"
+    },
+    {
+        "text": "I think the image shows a cat",
+        "animal": "cat"
+    },
+    {
+        "text": "The animal in this photo is a cat",
+        "animal": "cat"
+    },
+    {
+        "text": "Looks like a cat in the image",
+        "animal": "cat"
+    },
+    {
+        "text": "Can you see the cat here?",
+        "animal": "cat"
+    },
+    {
+        "text": "There is a chicken in the picture",
+        "animal": "chicken"
+    },
+    {
+        "text": "I think the image shows a chicken",
+        "animal": "chicken"
+    },
+    {
+        "text": "The animal in this photo is a chicken",
+        "animal": "chicken"
+    },
+    {
+        "text": "Looks like a chicken in the image",
+        "animal": "chicken"
+    },
+    {
+        "text": "Can you see the chicken here?",
+        "animal": "chicken"
+    },
+    {
+        "text": "There is a cow in the picture",
+        "animal": "cow"
+    },
+    {
+        "text": "I think the image shows a cow",
+        "animal": "cow"
+    },
+    {
+        "text": "The animal in this photo is a cow",
+        "animal": "cow"
+    },
+    {
+        "text": "Looks like a cow in the image",
+        "animal": "cow"
+    },
+    {
+        "text": "Can you see the cow here?",
+        "animal": "cow"
+    },
+    {
+        "text": "There is a dog in the picture",
+        "animal": "dog"
+    },
+    {
+        "text": "I think the image shows a dog",
+        "animal": "dog"
+    },
+    {
+        "text": "The animal in this photo is a dog",
+        "animal": "dog"
+    },
+    {
+        "text": "Looks like a dog in the image",
+        "animal": "dog"
+    },
+    {
+        "text": "Can you see the dog here?",
+        "animal": "dog"
+    },
+    {
+        "text": "There is a elephant in the picture",
+        "animal": "elephant"
+    },
+    {
+        "text": "I think the image shows a elephant",
+        "animal": "elephant"
+    },
+    {
+        "text": "The animal in this photo is a elephant",
+        "animal": "elephant"
+    },
+    {
+        "text": "Looks like a elephant in the image",
+        "animal": "elephant"
+    },
+    {
+        "text": "Can you see the elephant here?",
+        "animal": "elephant"
+    },
+    {
+        "text": "There is a horse in the picture",
+        "animal": "horse"
+    },
+    {
+        "text": "I think the image shows a horse",
+        "animal": "horse"
+    },
+    {
+        "text": "The animal in this photo is a horse",
+        "animal": "horse"
+    },
+    {
+        "text": "Looks like a horse in the image",
+        "animal": "horse"
+    },
+    {
+        "text": "Can you see the horse here?",
+        "animal": "horse"
+    },
+    {
+        "text": "There is a sheep in the picture",
+        "animal": "sheep"
+    },
+    {
+        "text": "I think the image shows a sheep",
+        "animal": "sheep"
+    },
+    {
+        "text": "The animal in this photo is a sheep",
+        "animal": "sheep"
+    },
+    {
+        "text": "Looks like a sheep in the image",
+        "animal": "sheep"
+    },
+    {
+        "text": "Can you see the sheep here?",
+        "animal": "sheep"
+    },
+    {
+        "text": "There is a spider in the picture",
+        "animal": "spider"
+    },
+    {
+        "text": "I think the image shows a spider",
+        "animal": "spider"
+    },
+    {
+        "text": "The animal in this photo is a spider",
+        "animal": "spider"
+    },
+    {
+        "text": "Looks like a spider in the image",
+        "animal": "spider"
+    },
+    {
+        "text": "Can you see the spider here?",
+        "animal": "spider"
+    },
+    {
+        "text": "There is a squirrel in the picture",
+        "animal": "squirrel"
+    },
+    {
+        "text": "I think the image shows a squirrel",
+        "animal": "squirrel"
+    },
+    {
+        "text": "The animal in this photo is a squirrel",
+        "animal": "squirrel"
+    },
+    {
+        "text": "Looks like a squirrel in the image",
+        "animal": "squirrel"
+    },
+    {
+        "text": "Can you see the squirrel here?",
+        "animal": "squirrel"
+    }
+]

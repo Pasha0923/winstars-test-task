@@ -9,5 +9,10 @@ __pycache__/
 .ipynb_checkpoints/
 
 # datasets
-data/
-__pycache__/
+data/raw-img
+# Virtual environments
+.venv/
+venv/
+env/
+# ner_model
+trained_models/ner_model

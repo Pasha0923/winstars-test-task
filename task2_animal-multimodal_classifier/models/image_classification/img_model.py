@@ -16,7 +16,7 @@ class ImageClassifier:
             transforms.ToTensor(),
         ])
 
-    def predict(self, image):  # PIL.Image
+    def predict(self, image): 
         img_tensor = self.transform(image).unsqueeze(0).to(self.device)
         self.model.eval()
         with torch.no_grad():
