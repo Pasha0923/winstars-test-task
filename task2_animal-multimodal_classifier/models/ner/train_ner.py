@@ -41,25 +41,14 @@ dataset = Dataset.from_dict({
     "labels": tokenized_dataset["labels"]
 })
 
-# -------------------------------
-# 5️⃣ TrainingArguments
-# training_args = TrainingArguments(
-#     output_dir="trained_models/ner_model",
-#     num_train_epochs=3,
-#     per_device_train_batch_size=8,
-#     logging_dir="./logs",
-#     logging_steps=5,
-#     save_strategy=IntervalStrategy.EPOCH,
-#     evaluation_strategy=IntervalStrategy.EPOCH
-# )
 training_args = TrainingArguments(
     output_dir="trained_models/ner_model",
     num_train_epochs=10,
     per_device_train_batch_size=16,
     logging_dir="./logs",
-    save_strategy="epoch",   # сохранение после каждой эпохи
-    logging_strategy="steps", # логируем по шагам
-    logging_steps=5           # каждые 5 шагов
+    save_strategy="epoch", 
+    logging_strategy="steps",
+    logging_steps=5 
 )
 from transformers import TrainerCallback
 

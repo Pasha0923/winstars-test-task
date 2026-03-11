@@ -2,7 +2,7 @@ import os
 import json
 
 data_dir = "data/raw-img"
-output_dir = "trained_models"
+output_dir = "data"
 
 print("Current working dir:", os.getcwd())
 print("data_dir exists?", os.path.exists(data_dir))

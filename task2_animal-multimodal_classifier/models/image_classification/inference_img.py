@@ -116,7 +116,7 @@ def main():
 
     parser.add_argument("--image", type=str, required=True, help="Path to image")
     parser.add_argument("--model_path", type=str, default="trained_models/img_model.pth")
-    parser.add_argument("--classes_path", type=str, default="trained_models/classes.json")
+    parser.add_argument("--classes_path", type=str, default="data/classes.json")
 
     args = parser.parse_args()
 
