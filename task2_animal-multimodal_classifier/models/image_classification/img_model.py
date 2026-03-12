@@ -1,22 +1,21 @@
-# models/image_classification/img_model.py
 import torch
 import torch.nn as nn
 import torchvision.models as models
 import torchvision.transforms as transforms
 
 class ImageClassifier:
+    """ImageClassifier wraps a pre-trained ResNet18 model for image classification"""
     def __init__(self, num_classes=10, device="cuda"):
         self.device = device
         self.model = models.resnet18(pretrained=True)
         self.model.fc = nn.Linear(self.model.fc.in_features, num_classes)
         self.model.to(self.device)
-
         self.transform = transforms.Compose([
             transforms.Resize((224,224)),
             transforms.ToTensor(),
         ])
-
-    def predict(self, image): 
+    def predict(self, image):
+        """Predict the class of a single PIL image""" 
         img_tensor = self.transform(image).unsqueeze(0).to(self.device)
         self.model.eval()
         with torch.no_grad():

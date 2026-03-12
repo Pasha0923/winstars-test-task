@@ -15,5 +15,3 @@ classes = sorted([c for c in os.listdir(data_dir) if os.path.isdir(os.path.join(
 if classes:
     with open(os.path.join(output_dir, "classes.json"), "w") as f:
         json.dump(classes, f)
-
-print("Saved classes:", classes)

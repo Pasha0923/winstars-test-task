@@ -117,7 +117,7 @@ trained_models/
 
 Python 3.11 – 3.13
 Poetry (for dependency management)
- Libraries:
+Libraries:
 - torch
 - torchvision
 - transformers
