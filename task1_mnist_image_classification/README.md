@@ -19,19 +19,20 @@ The `MnistClassifier` class acts as a wrapper to select the algorithm (`rf`, `nn
 ```bash
 task1_mnist_image_classification/
 ├── models/
-│ ├── interface.py # abstract classifier interface
-│ ├── cnn_model.py # CNN
-│ ├── nn_model.py # Feed-Forward NN
-│ ├── rf_model.py # Random Forest
+│ ├── interface.py        # abstract classifier interface
+│ ├── cnn_model.py        # CNN
+│ ├── nn_model.py         # Feed-Forward NN
+│ ├── rf_model.py         # Random Forest
 │ ├── mnist_classifier.py # main classifier wrapper
 | ├── __init__.py
 ├── utils/
-│ └── mnist_loader.py # function to load MNIST dataset
+│ └── mnist_loader.py     # function to load MNIST dataset
 ├── notebook/ 
-| └── demo.ipynb # notebook demonstrating model training and evaluation
-├── pyproject.toml # Poetry project file
-|── .gitignore
-|── requirements.txt
+| └── demo.ipynb          # notebook demonstrating model training and evaluation
+├── pyproject.toml        # poetry configuration with dependencies
+├── README.md             # project documentation
+|── .gitignore            # ignored files
+|── requirements.txt      # pip-installable dependencies
 ```
 
 ## Requirements 
@@ -69,13 +70,15 @@ Demo Notebook demonstrates how the models work:
 - Evaluating accuracy
 - Edge case testing
 
-You can open file `demo.ipynb` it in Jupyter Notebook/VS Code or Google Colab and run the cells sequentially.
+You can open file `demo.ipynb` it in Jupyter Notebook run the cells sequentially.
+```bash
+poetry run jupyter notebook
+```
 
 ## Edge Cases
 We test how the model handles:
 - Correct single image
 - Missing batch dimension
-- Incorrect input shape
 
 ## Notes
 - The MNIST dataset is automatically downloaded via torchvision.datasets.MNIST.

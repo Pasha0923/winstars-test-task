@@ -19,7 +19,7 @@ task2_animal-multimodal_classifier/
 │
 ├── data/
 │   └── ner_dataset.json        # synthetic dataset used for NER fine-tuning
-│   └── classes.json            # mapping between class indices and animal names
+│   └── classes.json            # animal classes
 │
 ├── notebooks/
 │   └── eda.ipynb               # exploratory data analysis of the Animals-10 dataset
@@ -28,27 +28,28 @@ task2_animal-multimodal_classifier/
 
 │   ├── ner/
 │   │   ├── ner_model.py        # NER model architecture (DistilBERT for token classification)
-│   │   ├── train_ner.py        # script for fine-tuning the NER model
-│   │   ├── inference_ner.py    # script for extracting animal names from text
-│   │   └── generate_ner_dataset.py  # script to generate synthetic NER training data
+│   │   ├── train_ner.py        # NER training script
+│   │   ├── inference_ner.py    # extract animal names from text
+│   │   └── generate_ner_dataset.py # synthetic NER dataset generation
 │
 │   ├── image_classification/
 │   │   ├── img_model.py        # CNN image classifier (ResNet18)
-│   │   ├── train_img.py        # script for training the image classifier
-│   │   ├── inference_img.py    # script for predicting the animal from an image
-│   │   └── create_classes_json.py   # utility script to generate class mapping file
+│   │   ├── train_img.py        # training the image classifier
+│   │   ├── inference_img.py    # predicting the animal from an image
+│   │   └── create_classes_json.py # generate class mapping file
 │
 ├── pipeline.py                 # multimodal pipeline (text + image → True/False)
 │
 ├── trained_models/
-│   ├── img_model.pth           # trained weights of the image classification model
+│   ├─ img_model.pth            # trained weights of the image classification model
 │   
 │
-├── examples/image                # example images for testing the pipeline
+├── examples/image              # example image for testing the pipeline
 │  
-├── pyproject.toml              # project dependencies (Poetry)
+├── pyproject.toml              # poetry configuration with dependencies
 ├── README.md                   # project documentation
-└── .gitignore                  # ignored files
+└──.gitignore                   # ignored files
+|── requirements.txt            # pip-installable dependencies
 ```
 
 ## Exploratory Data Analysis
