@@ -114,9 +114,9 @@ trained_models/
 ```
 ## Requirements 
 
-Python 3.11 – 3.13
-Poetry (for dependency management)
-Libraries:
+ Python 3.11 – 3.13
+ Poetry (for dependency management)
+ Libraries:
 - torch
 - torchvision
 - transformers
@@ -147,16 +147,20 @@ Test image classification only:
 ```bash
  poetry run python models/image_classification/inference_img.py --image examples/image/1.jpeg
 ```
- 2. NER (Text → Animal)
+2. NER (Text → Animal)
 
 Test text animal extraction:
 ```bash
-poetry run python models/ner/inference_ner.py --text "Your text with animals from dataset , example cat"
+poetry run python models/ner/inference_ner.py --text "Your text with animals from dataset example cat"
 ```   
 3. Multimodal Pipeline (Text + Image)
 ```bash
 poetry run python pipeline.py --text "I have a feeling that the animal shown here might be a butterfly" --image examples/image/1.jpeg
 ```       
+4. Exploratory Data Analysis
+```bash
+poetry run jupyter notebook
+```
 
 ## Notes
 
