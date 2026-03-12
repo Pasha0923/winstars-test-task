@@ -4,7 +4,6 @@ from transformers import Trainer, TrainingArguments , TrainerCallback
 from ner_model import NERModel
 from transformers import TrainerCallback
 
-# Load custom NER dataset
 with open("data/ner_dataset.json") as f:
     data = json.load(f)
 

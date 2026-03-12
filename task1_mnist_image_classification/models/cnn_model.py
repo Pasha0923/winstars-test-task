@@ -8,7 +8,6 @@ class CNN(nn.Module):
 
     def __init__(self):
         super().__init__()
-
         self.conv = nn.Sequential(
             nn.Conv2d(1, 16, 3),
             nn.ReLU(),
@@ -18,14 +17,12 @@ class CNN(nn.Module):
             nn.ReLU(),
             nn.MaxPool2d(2)
         )
-
         self.fc = nn.Sequential(
             nn.Flatten(),
             nn.Linear(32 * 5 * 5, 128),
             nn.ReLU(),
             nn.Linear(128, 10)
         )
-
     def forward(self, x):
         x = self.conv(x)
         x = self.fc(x)

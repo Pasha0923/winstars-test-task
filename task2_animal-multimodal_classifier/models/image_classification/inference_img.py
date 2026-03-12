@@ -16,7 +16,7 @@ def predict_image_animal(image_path, model_path, classes_path):
         classes = json.load(f)
     num_classes = len(classes)
 
-    # Resize to model input, convert PIL to tensor , normalize as done in training"""
+    # Resize to model input, convert PIL to tensor , normalize as done in training
     transform = transforms.Compose([
         transforms.Resize((160, 160)),
         transforms.ToTensor(),

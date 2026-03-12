@@ -25,10 +25,10 @@ task2_animal-multimodal_classifier/
 │   └── eda.ipynb               # exploratory data analysis of the Animals-10 dataset
 │
 ├── models/                     # model implementations
-
+│ 
 │   ├── ner/
-│   │   ├── ner_model.py        # NER model architecture (DistilBERT for token classification)
-│   │   ├── train_ner.py        # NER training script
+│   │   ├── ner_model.py        # ner model architecture (DistilBERT for token classification)
+│   │   ├── train_ner.py        # ner training script
 │   │   ├── inference_ner.py    # extract animal names from text
 │   │   └── generate_ner_dataset.py # synthetic NER dataset generation
 │
@@ -43,12 +43,11 @@ task2_animal-multimodal_classifier/
 ├── trained_models/
 │   ├─ img_model.pth            # trained weights of the image classification model
 │   
-│
 ├── examples/image              # example image for testing the pipeline
 │  
 ├── pyproject.toml              # poetry configuration with dependencies
 ├── README.md                   # project documentation
-└──.gitignore                   # ignored files
+│── .gitignore                  # ignored files
 |── requirements.txt            # pip-installable dependencies
 ```
 
@@ -149,7 +148,8 @@ Test image classification only:
  poetry run python models/image_classification/inference_img.py --image examples/image/1.jpeg
 ```
  2. NER (Text → Animal)
- Test text animal extraction:
+
+Test text animal extraction:
 ```bash
 poetry run python models/ner/inference_ner.py --text "Your text with animals from dataset , example cat"
 ```   

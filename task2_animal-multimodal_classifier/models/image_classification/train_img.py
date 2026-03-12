@@ -33,11 +33,12 @@ dataloader = DataLoader(
 )
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Initialize pre-trained ResNet18 model
+# Initialize pre-trained ResNet18 model and freeze all layers to speed up training
 model = resnet18(weights=ResNet18_Weights.DEFAULT)
 for param in model.parameters():
     param.requires_grad = False
 
+# Replace ResNet's final layer head with new layer for num_classes
 model.fc = nn.Linear(model.fc.in_features, num_classes)
 model = model.to(device)
 criterion = nn.CrossEntropyLoss()
