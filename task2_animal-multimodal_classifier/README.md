@@ -1,4 +1,4 @@
-# Task 2: Animal Multimodal Classifier
+# Animal Multimodal Classifier
 
 ## Overview
 
